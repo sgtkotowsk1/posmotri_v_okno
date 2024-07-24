@@ -9,15 +9,6 @@ html {
   max-height: 800px;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
 
 .page {
   inline-size: 1200px;
@@ -26,7 +17,8 @@ html {
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  background-color: #1b1919;
+  font-weight: 400;
+  background-color: #1B1919;
   max-height: inherit;
   padding: 133px 30px;
   
@@ -51,53 +43,90 @@ ol {
   list-style: none;
 }
 
-
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
   gap: 30px;
   max-height: 534px;
-
-}
-
-.result {
-  max-height: 534px; /*исправить на 100% когда кнопки встанут*/
 }
 
 .result__video-container {
-  min-width: 100%;
-  padding: 78px 0 16px 0;
+  max-width: 711px;
+  height: 386px;
+  margin: 78px 0 16px 0;
+  position: relative;
 }
 
 .result__video {
+  height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.content__video-card-thumbnail {
-  width: 194px;
 }
 
 .search-form {
   display: flex;
   gap: 40px;
   justify-content: space-between;
+  align-items: start;
 }
 
-
-.content__list {
-  max-height: 298px;
-  overflow: auto;
+.content__details {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 19px;
 }
+
+.content__list {
+  display: grid;
+  gap: 30px;
+  overflow: auto;
+  max-height: 298px;
+  position: relative;
+}
+
+.content__list-item {
+  width: 100%;
+  height: 100%;
+}
+
+
+.content__card-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__video-card-description, .search-form__fieldset {
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  line-height: 90%;
+  font-weight: 400;
+}
+
+
+.content__video-card-description-container {
+  width: 100%;
+  overflow: auto;
+}
+
+.content__video-card-title {
+    font-family: Oswald;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
 
 .content__video-card {
   display: flex;
 }
 
+.content__card-link_current > .content__video-card-description-container {
+  background-color: red;
+}
 
 .title {
   font-family: Oswald;
@@ -106,11 +135,16 @@ ol {
   text-transform: uppercase;
   line-height: 96%;
   max-width: 260px;
+  
 }
 
 .content__accent {
   color: rgb(255 255 255 / .3)
 }
 
-
-
+.content__video-card-thumbnail {
+  max-width: 194px;
+  max-height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
