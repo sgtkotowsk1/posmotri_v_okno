@@ -117,8 +117,6 @@ ol {
 }
 
 
-
-
 /* на случай если много блоков для ввода текста, а этот такой нитакуся */
 
 .search-form__label > input[type="text"] {
@@ -134,7 +132,6 @@ ol {
   color: #fff;
   appearance: none;
 }
-
 
 
 .button {
@@ -192,16 +189,13 @@ font-size: 18px;
   margin: 2px;
 }
 
-
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
-
 .content__card-link {
   color: #fff;
-  text-decoration: none;
-  
+  text-decoration: none; 
 }
 
 .content__card-link_current > .content__video-card {
@@ -215,8 +209,6 @@ font-size: 18px;
   font-weight: 400;
   padding-top: 6px;
 }
-
-
 
 .content__video-card-description-container {
   width: 100%;
@@ -233,9 +225,7 @@ font-size: 18px;
    
 }
 
-.content__video-card {
-  display: flex;
-}
+.content__video-card {display: flex;}
 
 .content__video-card-thumbnail {
   max-width: 194px;
@@ -244,9 +234,7 @@ font-size: 18px;
   object-position: center;
 }
 
-.more-button {
-  width: 100%
-}
+.more-button {width: 100%}
 
 
 /*------------------ВСЯКИЕ АКТИВНОСТИ С КНОПКАМИ И ССЫЛКАМИ--------------*/
@@ -267,15 +255,10 @@ input[type="checkbox"]:checked + span {
 }
 
 
-
-.button:active {
-  background-color:#545050;
-}
+.button:active {background-color:#545050;}
 
 
-input[type="text"]:focus, .search-form__label:focus, .button:focus, .content__list-item:focus {
-  outline: none;
-}
+input[type="text"]:focus, .search-form__label:focus, .button:focus, .content__list-item:focus {outline: none;}
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
